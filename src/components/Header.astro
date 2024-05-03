@@ -1,5 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import Logo from "../../public/img/logo.png";
 ---
 
 <header class="sticky top-0">
@@ -24,11 +26,32 @@ import { Icon } from "astro-icon/components";
       >
     </div>
   </div>
-  <nav class="bg-blanco">
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
-  </nav>
+
+  {/* Header Menu */}
+  <div class="bg-blanco font-Signika py-2">
+    <div class="my-container flex justify-between">
+      <a href="/" class="flex items-center font-bold text-rosado gap-3">
+        <Picture
+          src={Logo}
+          alt="Logo"
+          width={70}
+          height={70}
+          loading={"eager"}
+        />
+        <p class="uppercase hidden md:block text-xl">Dra. Yuleima Pérez</p>
+      </a>
+
+      {/* Navigation Bar */}
+      <nav class="flex-1 text-center grid items-center">
+        <ul class="uppercase text-azul grid grid-cols-1 sm:grid-cols-3 gap-3  lg:grid-cols-6 text-sm">
+          <li><a class="hover:border-b-rosado hover:border-b-2" href="#">Inicio</a></li>
+          <li><a class="hover:border-b-rosado hover:border-b-2" href="#">Sobre Mí</a></li>
+          <li><a class="hover:border-b-rosado hover:border-b-2" href="#">Servicios</a></li>
+          <li><a class="hover:border-b-rosado hover:border-b-2" href="#">Galería</a></li>
+          <li><a class="hover:border-b-rosado hover:border-b-2" href="#">Horario</a></li>
+          <li><a class="hover:border-b-rosado hover:border-b-2" href="#">Ubicación</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>

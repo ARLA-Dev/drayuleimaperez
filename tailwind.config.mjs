@@ -1,5 +1,14 @@
 module.exports = {
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        ".my-container": {
+          width: 'min(95%, 1024px)',
+          margin: '0 auto',
+        },
+      });
+    },
+  ],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {},
