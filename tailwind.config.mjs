@@ -8,7 +8,7 @@ module.exports = {
     },
     fontFamily: {
 	  Signika: ["Signika", "sans-serif"],
-	  Roboto: ['Roboto"', "sans-serif"], 
+	  Roboto: ["Roboto", "sans-serif"], 
 	  Montagu: ["Montagu Slab", "sans-serif"],
     },
     colors: {
@@ -19,6 +19,7 @@ module.exports = {
       grisClaro: "#d1c5cb",
       blanco: "#fff",
       negro: "#000",
+      rosadoClaro: "#f7d0e6",
     },
   },
 };

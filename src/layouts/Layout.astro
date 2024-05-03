@@ -10,7 +10,7 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -50,10 +50,8 @@ const { title, description } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz@16..144&display=swap"
     />
   </head>
-  <body class="h-full bg-rosado font-Signika">
+  <body class="h-screen bg-gradient-to-b from-rosadoClaro to-white">
     <Header />
-
-    <h1>Hola</h1>
     <slot />
   </body>
 </html>
