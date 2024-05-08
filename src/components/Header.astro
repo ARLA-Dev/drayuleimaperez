@@ -7,7 +7,7 @@ import Logo from "../../public/img/logo.png";
 <header class="sticky top-0">
   {/* Header Info */}
   <div
-    class="font-Roboto bg-azul flex flex-col md:flex-row items-center justify-center gap-3 md:gap-10 text-blanco text-[10px] md:text-xs font-bold py-2"
+    class="font-Roboto bg-azul flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-10 text-blanco text-[10px] md:text-xs font-bold py-2"
   >
     <div class="flex gap-2 items-center">
       <Icon name="fa6-solid:phone" />
@@ -29,67 +29,74 @@ import Logo from "../../public/img/logo.png";
 
   {/* Header Menu */}
   <div class="bg-blanco font-Signika py-2">
-    <div class="my-container flex justify-between items-center">
-      <a href="/" class="flex items-center font-bold text-rosado gap-3">
-        <Picture
-          src={Logo}
-          alt="Logo"
-          width={70}
-          height={70}
-          loading={"eager"}
-        />
-        <p class="uppercase hidden md:block text-xl">Dra. Yuleima Pérez</p>
-      </a>
+    <div
+      class="my-container flex justify-between items-center flex-col sm:flex-row"
+    >
+      <div class="flex items-center justify-between w-[90%] sm:w-auto">
+        <a href="/" class="flex items-center font-bold text-rosado gap-3">
+          <Picture
+            src={Logo}
+            alt="Logo"
+            width={70}
+            height={70}
+            loading={"eager"}
+          />
+          <p class="uppercase hidden md:block text-xl">Dra. Yuleima Pérez</p>
+        </a>
 
-
-      {/*
-      
-       &::before {
-        content: "";
-        display: block;
-        width: 2rem;
-        height: 2px;
-        background-color: v.$negro;
-        margin-right: 1.5rem;
-        transition: all 0.3s ease-in-out;
-      } Convert to tailwind
-       */}
-
-      {/* Hamburger Menu */}
-      <ul class="sm:hidden flex flex-col gap-1">
-        <li><span class="before:block before:w-[20px] before:h-[2px] before:bg-negro"></span></li>
-        <li><span class="before:block before:w-[20px] before:h-[2px] before:bg-negro"></span></li>
-        <li><span class="before:block before:w-[20px] before:h-[2px] before:bg-negro"></span></li>
-      </ul>
+        {/* Hamburger Menu */}
+        <ul class="sm:hidden flex flex-col gap-1">
+          <li>
+            <span
+              class="before:block before:w-[20px] before:h-[2px] before:bg-negro"
+            ></span>
+          </li>
+          <li>
+            <span
+              class="before:block before:w-[20px] before:h-[2px] before:bg-negro"
+            ></span>
+          </li>
+          <li>
+            <span
+              class="before:block before:w-[20px] before:h-[2px] before:bg-negro"
+            ></span>
+          </li>
+        </ul>
+      </div>
 
       {/* Navigation Bar */}
-      <nav class="flex-1 max-w-[600px] text-center hidden sm:items-center sm:grid">
+      <nav class="flex-1 max-w-[600px] text-center sm:items-center sm:grid">
         <ul
           class="uppercase text-azul grid grid-cols-1 sm:grid-cols-3 gap-3 lg:grid-cols-6 text-sm md:text-base"
         >
           <li>
-            <a class="hover:border-b-rosado hover:border-b-2" href="#"
-              >Inicio</a>
+            <a class="hover:border-b-rosado hover:border-b-2" href="#">Inicio</a
+            >
           </li>
           <li>
             <a class="hover:border-b-rosado hover:border-b-2" href="#"
-              >Sobre Mí</a>
+              >Sobre Mí</a
+            >
           </li>
           <li>
             <a class="hover:border-b-rosado hover:border-b-2" href="#"
-              >Servicios</a>
+              >Servicios</a
+            >
           </li>
           <li>
             <a class="hover:border-b-rosado hover:border-b-2" href="#"
-              >Galería</a>
+              >Galería</a
+            >
           </li>
           <li>
             <a class="hover:border-b-rosado hover:border-b-2" href="#"
-              >Horario</a>
+              >Horario</a
+            >
           </li>
           <li>
             <a class="hover:border-b-rosado hover:border-b-2" href="#"
-              >Ubicación</a>
+              >Ubicación</a
+            >
           </li>
         </ul>
       </nav>
