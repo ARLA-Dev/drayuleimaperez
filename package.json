@@ -23,7 +23,6 @@
   },
   "type": "module",
   "devDependencies": {
-    "@iconify-json/fa6-solid": "^1.1.21",
-    "i": "^0.3.7"
+    "@iconify-json/fa6-solid": "^1.1.21"
   }
 }

@@ -1,12 +1,38 @@
 import { useState } from "react";
 
+const Links = [
+  {
+    name: "Inicio",
+    link: "/",
+  },
+  {
+    name: "Sobre Mí",
+    link: "#",
+  },
+  {
+    name: "Servicios",
+    link: "#",
+  },
+  {
+    name: "Galería",
+    link: "#",
+  },
+  {
+    name: "Horario",
+    link: "#",
+  },
+  {
+    name: "Ubicación",
+    link: "#",
+  }
+]
+
 const HeaderMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    }
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="bg-blanco font-Signika py-2">
@@ -18,56 +44,46 @@ const HeaderMenu = () => {
               alt="Logo Dra. Yuleima Perez"
               className="w-[70px] h-[70px]"
             />
-            <p className="uppercase hidden md:block text-xl">Dra. Yuleima Pérez</p>
+            <p className="uppercase hidden md:block text-xl">
+              Dra. Yuleima Pérez
+            </p>
           </a>
 
           {/* Hamburger Menu */}
-          <ul className="sm:hidden flex flex-col gap-1 cursor-pointer " onClick={toggleMenu}>
+          <ul
+            className="sm:hidden flex flex-col gap-1 cursor-pointer"
+            onClick={toggleMenu}
+          >
             <li>
-              <span className={`before:block before:w-[20px] before:h-[2px] before:bg-negro ${isOpen ? "before:rotate-45 before:transform before:translate-y-[11px]" : "before:rotate-0"}`}></span>
+              <span
+                className={`before:block before:w-[20px] before:h-[2px] before:bg-negro`}
+              ></span>
             </li>
             <li>
-              <span className={`before:block before:w-[20px] before:h-[2px] before:bg-negro ${isOpen ? "before:opacity-0" : "before:opacity-100"}`}></span>
+              <span
+                className={`before:block before:w-[20px] before:h-[2px] before:bg-negro`}
+              ></span>
             </li>
             <li>
-              <span className={`before:block before:w-[20px] before:h-[2px] before:bg-negro ${isOpen ? "before:-rotate-45" : "before:rotate-0"}`}></span>
+              <span
+                className={`before:block before:w-[20px] before:h-[2px] before:bg-negro`}
+              ></span>
             </li>
           </ul>
         </div>
 
         {/* Navigation Bar */}
-        <nav className={`${isOpen ? "block h-full opacity-100" : "hidden h-0  opacity-0 sm:opacity-100 sm:h-full sm:block"} flex-1 max-w-[600px] text-center sm:items-center sm:grid`}>
+        <nav
+          className={`${
+            isOpen
+              ? "block  opacity-100"
+              : " hidden  opacity-0 sm:opacity-100 sm:h-full sm:block"
+          } flex-1 max-w-[600px] text-center sm:items-center sm:grid`}
+        >
           <ul className="uppercase text-azul grid grid-cols-1 sm:grid-cols-3 gap-3 lg:grid-cols-6 text-sm md:text-base">
-            <li>
-              <a className="hover:border-b-rosado hover:border-b-2" href="#">
-                Inicio
-              </a>
-            </li>
-            <li>
-              <a className="hover:border-b-rosado hover:border-b-2" href="#">
-                Sobre Mí
-              </a>
-            </li>
-            <li>
-              <a className="hover:border-b-rosado hover:border-b-2" href="#">
-                Servicios
-              </a>
-            </li>
-            <li>
-              <a className="hover:border-b-rosado hover:border-b-2" href="#">
-                Galería
-              </a>
-            </li>
-            <li>
-              <a className="hover:border-b-rosado hover:border-b-2" href="#">
-                Horario
-              </a>
-            </li>
-            <li>
-              <a className="hover:border-b-rosado hover:border-b-2" href="#">
-                Ubicación
-              </a>
-            </li>
+            {Links.map((link) => (
+              <NavLink key={link.name} href={link.link} text={link.name} />
+            ))}
           </ul>
         </nav>
       </div>
@@ -76,3 +92,13 @@ const HeaderMenu = () => {
 };
 
 export default HeaderMenu;
+
+const NavLink = ({ href, text }) => {
+  return (
+    <li>
+      <a className="hover:border-b-rosado hover:border-b-2" href={href}>
+        {text}
+      </a>
+    </li>
+  );
+};
