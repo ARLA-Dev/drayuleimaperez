@@ -38,15 +38,15 @@ const HeaderMenu = () => {
 
   return (
     <div className="bg-blanco font-Signika py-2">
-      <div className="my-container flex justify-between items-center flex-col sm:flex-row">
-        <div className="flex items-center justify-between w-[90%] sm:w-auto">
+      <div className="my-container flex justify-between items-center flex-col md:flex-row">
+        <div className="flex items-center justify-between w-[90%] md:w-auto">
           <a href="/" className="flex items-center font-bold text-rosado gap-3">
             <img
               src={"/img/logo.png"}
               alt="Logo Dra. Yuleima Perez"
               className="w-[70px] h-[70px]"
             />
-            <p className="uppercase hidden md:block text-xl">
+            <p className="uppercase hidden sm:block text-xl">
               Dra. Yuleima Pérez
             </p>
           </a>

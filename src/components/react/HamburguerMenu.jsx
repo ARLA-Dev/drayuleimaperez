@@ -5,7 +5,7 @@ const HamburguerMenu = ({ isOpen, toggleMenu }) => {
   
   return (
     <div
-      className={`sm:hidden tham tham-e-squeeze tham-w-6 ${
+      className={`md:hidden tham tham-e-squeeze tham-w-6 ${
         isOpen ? "tham-active" : ""
       }`}
       onClick={handleTogleMenu}
