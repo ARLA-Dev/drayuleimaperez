@@ -10,4 +10,4 @@ interface Props {
 const { href, text, target, colorFondo, colorTexto } = Astro.props;
 ---
 
-<a href={href ? href : "#"} target={target ? target : "_self"} class={`bg-${colorFondo} text-${colorTexto} py-3 px-10 mt-3 inline-block decoration-none uppercase font-bold font-Roboto text-[12px] rounded-3xl transition-all ease-in-out duration-300 border-0 hover:opacity-95 cursor-pointer tracking-wide`}> {text} </a>
+<a href={href ? href : "#"} target={target ? target : "_self"} class={`${colorFondo} ${colorTexto} py-3 px-10 mt-3 inline-block decoration-none uppercase font-bold font-Roboto text-[12px] rounded-3xl transition-all ease-in-out duration-300 border-0 hover:opacity-95 cursor-pointer tracking-wide`}> {text} </a>
