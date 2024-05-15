@@ -3,11 +3,12 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         ".my-container": {
-          width: 'min(95%, 1024px)',
-          margin: '0 auto',
+          width: "min(95%, 1024px)",
+          margin: "0 auto",
         },
       });
     },
+    require("tailwind-hamburgers"),
   ],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -16,9 +17,9 @@ module.exports = {
       center: true,
     },
     fontFamily: {
-	  Signika: ["Signika", "sans-serif"],
-	  Roboto: ["Roboto", "sans-serif"], 
-	  Montagu: ["Montagu Slab", "sans-serif"],
+      Signika: ["Signika", "sans-serif"],
+      Roboto: ["Roboto", "sans-serif"],
+      Montagu: ["Montagu Slab", "sans-serif"],
     },
     colors: {
       azul: "#304472",

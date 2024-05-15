@@ -24,8 +24,8 @@ const Links = [
   {
     name: "Ubicación",
     link: "#",
-  }
-]
+  },
+];
 
 const HeaderMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,26 +50,11 @@ const HeaderMenu = () => {
           </a>
 
           {/* Hamburger Menu */}
-          <ul
-            className="sm:hidden flex flex-col gap-1 cursor-pointer"
-            onClick={toggleMenu}
-          >
-            <li>
-              <span
-                className={`before:block before:w-[20px] before:h-[2px] before:bg-negro`}
-              ></span>
-            </li>
-            <li>
-              <span
-                className={`before:block before:w-[20px] before:h-[2px] before:bg-negro`}
-              ></span>
-            </li>
-            <li>
-              <span
-                className={`before:block before:w-[20px] before:h-[2px] before:bg-negro`}
-              ></span>
-            </li>
-          </ul>
+          <div className={`sm:hidden tham tham-e-squeeze tham-w-6 ${isOpen ? "tham-active" : ""}`} onClick={toggleMenu}>
+            <div className="tham-box">
+              <div className="tham-inner" />
+            </div>
+          </div>
         </div>
 
         {/* Navigation Bar */}
