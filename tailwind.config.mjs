@@ -12,7 +12,18 @@ module.exports = {
   ],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0", height: "0", maxHeight: "0" },
+          "100%": { opacity: "1", height: "auto", maxHeight: "100%" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1", height: "auto", maxHeight: "100%" },
+          "100%": { opacity: "0", height: "0", maxHeight: "0" },
+        }
+      },
+    },
     container: {
       center: true,
     },
