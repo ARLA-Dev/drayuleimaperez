@@ -1,29 +1,31 @@
 ---
+import Boton from "./Boton.astro";
 import ImagenPersonalizada from "./ImagenPersonalizada.astro";
-
-
 ---
+
 <div class="py-5">
-    <div class="my-container grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-3">
-      <div class="text-center transition-all ease-in-out duration-300 md:text-left">
-        <h1 class="hero__titulo">Dra. Yuleima Pérez</h1>
+  <div
+    class="my-container grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-3 sm:items-center"
+  >
+    <div
+      class="text-center transition-all ease-in-out duration-300 sm:text-left"
+    >
+      <h1 class="text-magenta uppercase font-Signika font-bold leading-tight" style="font-size: clamp(30px, 5vw, 48px);">Dra. Yuleima Pérez</h1>
 
-        <p class="hero__szubtitulo">
-          Médico Especialista en Ginecología y Obstetricia
-        </p>
+      <p class="uppercase my-4 font-Roboto font-bold text-azul"  style="font-size: clamp(16px, 5w, 24px);">
+        Médico Especialista en Ginecología y Obstetricia
+      </p>
 
-        <p class="hero__texto">
-          Durante más de dos décadas he tenido el privilegio de acompañar a
-          miles de mujeres en su viaje de salud y bienestar. Mi compromiso va
-          más allá de la experiencia; se trata de ofrecer una atención cálida,
-          dedicada y experta en cada etapa de su vida.
-        </p>
+      <p class="font-Roboto text-azul" style="font-size: clamp(1apx, 5vw, 18px);">
+        Durante más de dos décadas he tenido el privilegio de acompañar a miles
+        de mujeres en su viaje de salud y bienestar. Mi compromiso va más allá
+        de la experiencia; se trata de ofrecer una atención cálida, dedicada y
+        experta en cada etapa de su vida.
+      </p>
 
-        <a href="#" class="hero__boton">
-          Ver Servicios
-        </a>
-      </div>
-
-      <ImagenPersonalizada />
+      <Boton text="Ver Servicios" colorFondo="magenta" colorTexto="blanco" />
     </div>
+
+    <ImagenPersonalizada />
   </div>
+</div>
