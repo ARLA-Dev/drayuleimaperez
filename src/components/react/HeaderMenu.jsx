@@ -1,4 +1,6 @@
 import { useState } from "react";
+import HamburguerMenu from "./HamburguerMenu";
+import NavBar from "./NavBar";
 
 const Links = [
   {
@@ -50,45 +52,14 @@ const HeaderMenu = () => {
           </a>
 
           {/* Hamburger Menu */}
-          <div
-            className={`sm:hidden tham tham-e-squeeze tham-w-6 ${
-              isOpen ? "tham-active" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            <div className="tham-box">
-              <div className="tham-inner" />
-            </div>
-          </div>
+          <HamburguerMenu isOpen={isOpen} toggleMenu={toggleMenu} />
         </div>
 
         {/* Navigation Bar */}
-        <nav
-          className={`${
-            isOpen
-              ? "animate-fadeIn h-full max-h-[600px] opacity-100 duration-500"
-              : "animate-fadeOut h-0 max-h-0 opacity-0 duration-[250ms]"
-          } sm:opacity-100 sm:h-auto sm:max-h-full flex-1 max-w-[600px] text-center sm:items-center sm:grid`}
-        >
-          <ul className={`uppercase text-azul grid grid-cols-1 sm:grid-cols-3 gap-3 lg:grid-cols-6 text-sm md:text-base ${isOpen ? "opacity-100" : "opacity-0"} sm:opacity-100`}>
-            {Links.map((link) => (
-              <NavLink key={link.name} href={link.link} text={link.name} />
-            ))}
-          </ul>
-        </nav>
+        <NavBar isOpen={isOpen} Links={Links} />
       </div>
     </div>
   );
 };
 
 export default HeaderMenu;
-
-const NavLink = ({ href, text }) => {
-  return (
-    <li>
-      <a className="hover:border-b-rosado hover:border-b-2" href={href}>
-        {text}
-      </a>
-    </li>
-  );
-};
