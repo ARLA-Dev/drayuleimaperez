@@ -1,16 +1,15 @@
 ---
 export interface Props {
   title: string;
-  class?: string;
+  className?: string;
 }
 
-const { title, class: className } = Astro.props;
+const { title, className } = Astro.props;
 ---
 
 <h3
   class=`
-text-center text-blanco uppercase font-bold font-Signika text-[18px] sm:text-[24px]
-${className}`
+text-center uppercase font-bold font-Signika text-[18px] sm:text-[24px] ${className === undefined ? "text-blanco" : className}`
 >
   {title}
 </h3>

@@ -1,7 +1,49 @@
 ---
+import { Image } from "astro:assets";
 import SectionTitle from "./utils/SectionTitle.astro";
 ---
 
 <section class="bg-rosado py-5 mt-5">
-    <SectionTitle title="Sobre mi"/>
+  <SectionTitle title="Sobre mi" />
+  <div class="my-container bg-rosadoClaro rounded-xl min-h-[200px] py-5">
+    <div class="grid grid-cols-1 gap-2 lg:gap-5 lg:grid-cols-[2fr_1fr]">
+      <!--MAIN - ABOUT ME - 2FR -->
+      <div
+        class="bg-blanco p-5 rounded-xl my-container flex flex-col justify-center"
+      >
+        <Image
+          src="/img/DraSentada.png"
+          alt="Fotografría de la Dra. Yuleima Pérez"
+          width={400}
+          height={400}
+          class="rounded-xl object-cover max-h-[400px] overflow-hidden mx-auto lg:w-[100%]"
+          loading={"lazy"}
+        />
+
+        <SectionTitle title="Dra. Yuleima Pérez" className="text-azul my-2" />
+        <h4 class="font-Roboto italic text-rosado font-bold text-center">
+          Especialista en Ginecología y Obstetricia
+        </h4>
+
+        <div class="mt-2 text-justify font-Roboto">
+          <p class="text-gris">
+            Soy la Dra. Yuleima Pérez, especialista en Ginecología y
+            Obstetricia, comprometida con la salud femenina. Con más de dos
+            décadas de experiencia, he sido guía en el viaje de miles de mujeres
+            hacia su bienestar. Mi enfoque va más allá de la mera práctica
+            médica; se trata de ofrecer un cuidado cálido, personalizado y
+            experto en cada etapa de la vida de mis pacientes.
+          </p>
+          <p class="text-gris">
+            Graduada de la Universidad Centro Occidental Lisandro Alvarado de
+            Barquisimeto, mi dedicación se refleja en cada caso. Cada paciente
+            recibe atención calma y personalizada, asegurando que su experiencia
+            de salud sea lo más confortable posible. Como tu médico, me esfuerzo
+            por explicar los términos médicos más complejos para que entiendas
+            plenamente tu situación.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

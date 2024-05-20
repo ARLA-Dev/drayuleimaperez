@@ -3,7 +3,7 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         ".my-container": {
-          width: "min(95%, 1024px)",
+          width: "min(95%, 1200px)",
           margin: "0 auto",
         },
       });
