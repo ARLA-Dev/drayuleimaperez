@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import SectionTitle from "./utils/SectionTitle.astro";
 import Card from "./Card.astro";
+import { cards } from "../data/data";
 ---
 
 <section class="bg-rosado py-5 mt-5">
@@ -50,9 +51,13 @@ import Card from "./Card.astro";
 
       <div class="grid grid-cols-1 grid-rows-3 gap-3 my-container">
 
-        <Card />
-        <Card />
-        <Card />
+        {cards.map(({ title, description, img }) => (
+          <Card
+            title={ title }
+            description={ description }
+            img={ img }
+          />
+        ))}
       </div>
     </div>
   </div>
