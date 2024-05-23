@@ -6,12 +6,14 @@ import { cards } from "../data/data";
 ---
 
 <section class="bg-rosado py-5 mt-5">
-  <SectionTitle title="Sobre mi" />
-  <div class="my-container bg-rosadoClaro rounded-xl min-h-[200px] py-5">
+  <SectionTitle title="Sobre mi" className="mb-2 text-blanco" />
+
+  <!--center vertically relative absulute bg-rosado -->
+  <div class="my-container relative bg-rosadoClaro rounded-xl min-h-[200px] py-5 px-0 lg:px-[50px] lg:before:content-[''] lg:before:bg-rosado lg:before:h-[90%] lg:before:w-[100px] lg:before:left-[-50px] lg:before:absolute lg:before:rounded-xl lg:before:top-1/2 lg:before:-translate-y-1/2">
     <div class="grid grid-cols-1 gap-2 lg:gap-5 lg:grid-cols-[2fr_1fr]">
       <!--MAIN - ABOUT ME - 2FR -->
       <div
-        class="bg-blanco p-5 rounded-xl my-container flex flex-col justify-center"
+        class="bg-blanco p-5 rounded-xl my-container flex flex-col justify-center shadow-md shadow-rosado"
       >
         <Image
           src="/img/DraSentada.png"

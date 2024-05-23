@@ -8,7 +8,7 @@ interface Props {
 const { title, description, img } = Astro.props;
 ---
 
-<div class="bg-blanco rounded-xl shadow-md border-blanco border-2 hover:border-magenta transition-all ease-in-out duration-300 p-3 md:p-5">
+<div class="bg-blanco rounded-xl shadow-md shadow-rosado border-blanco border-2 hover:border-magenta transition-all ease-in-out duration-300 p-3 md:p-5">
     <h5 class="text-azul font-bold font-Signika text-center">{title}</h5>
     <div class="flex justify-center my-2">
         <img src={ `/img/thumbnail/${img}.png`} alt={title}>
