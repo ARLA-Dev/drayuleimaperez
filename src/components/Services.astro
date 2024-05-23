@@ -1,0 +1,39 @@
+---
+import SectionTitle from "./utils/SectionTitle.astro";
+import { services } from "../data/data";
+---
+
+<div class="my-container my-3">
+    <SectionTitle title="Mis Servicios" className="text-magenta" />
+    
+    <!-- For each five services, create an ul with 5 li. Services is an array like this:
+    
+    export const services = [
+    "Biopsia",
+    "Citología",
+    "Colposcopía",
+    "Manejo de Climaterio",
+    "Manejo de Menopausia",
+    "Ecosonograma Pélvico",
+    "Ecografía Transvaginal",
+    "Ecosonograma Obstétrico",
+    "Plasma Rico en Plaquetas",
+    "Ecografía Doppler Obstétrica",
+    "Descarte de Patología Servical",
+    "Tratamiento de Patología Servical",
+    "Consulta Ginecológica y Obstetrica",
+    "Tratamiento de Patologías Mamarias",
+    "Cirugías Ginecológicas y Obstetricas"
+]-->
+
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-3 sm:items-center">
+        {
+            services.map((service) => (
+                <div
+                    class="text-center transition-all ease-in-out duration-300 sm:text-left"
+                >
+                    <p>{service}</p>
+                </div>
+            ))
+        }
+</div>

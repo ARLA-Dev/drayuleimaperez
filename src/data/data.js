@@ -15,3 +15,21 @@ export const cards = [
         img: "entendimiento"
     }
 ]
+
+export const services = [
+    "Biopsia",
+    "Citología",
+    "Colposcopía",
+    "Manejo de Climaterio",
+    "Manejo de Menopausia",
+    "Ecosonograma Pélvico",
+    "Ecografía Transvaginal",
+    "Ecosonograma Obstétrico",
+    "Plasma Rico en Plaquetas",
+    "Ecografía Doppler Obstétrica",
+    "Descarte de Patología Servical",
+    "Tratamiento de Patología Servical",
+    "Consulta Ginecológica y Obstetrica",
+    "Tratamiento de Patologías Mamarias",
+    "Cirugías Ginecológicas y Obstetricas"
+]
