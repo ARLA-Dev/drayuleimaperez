@@ -15,7 +15,7 @@ const NavBar = ({ isOpen, Links }) => {
         } md:opacity-100`}
       >
         {Links.map((link) => (
-          <NavLink key={link.name} href={link.link} text={link.name} />
+          <NavLink key={link.name} href={link.link} text={link.name} isOpen={isOpen} />
         ))}
       </ul>
     </nav>
