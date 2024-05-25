@@ -1,39 +1,52 @@
 ---
 import SectionTitle from "./utils/SectionTitle.astro";
 import { services } from "../data/data";
+
+const groupedServicesByFive = (services: string[]) => {
+  let groupedServices = [];
+  let index = 0;
+  while (index < services.length) {
+    groupedServices.push(services.slice(index, index + 5));
+    index += 5;
+  }
+  return groupedServices;
+};
 ---
 
 <div class="my-container my-3">
-    <SectionTitle title="Mis Servicios" className="text-magenta" />
-    
-    <!-- For each five services, create an ul with 5 li. Services is an array like this:
-    
-    export const services = [
-    "Biopsia",
-    "Citología",
-    "Colposcopía",
-    "Manejo de Climaterio",
-    "Manejo de Menopausia",
-    "Ecosonograma Pélvico",
-    "Ecografía Transvaginal",
-    "Ecosonograma Obstétrico",
-    "Plasma Rico en Plaquetas",
-    "Ecografía Doppler Obstétrica",
-    "Descarte de Patología Servical",
-    "Tratamiento de Patología Servical",
-    "Consulta Ginecológica y Obstetrica",
-    "Tratamiento de Patologías Mamarias",
-    "Cirugías Ginecológicas y Obstetricas"
-]-->
+  <SectionTitle title="Mis Servicios" className="text-magenta" />
 
-    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-3 sm:items-center">
-        {
-            services.map((service) => (
-                <div
-                    class="text-center transition-all ease-in-out duration-300 sm:text-left"
-                >
-                    <p>{service}</p>
-                </div>
-            ))
-        }
+  <div
+    class="grid grid-cols-1 gap-0 sm:grid-cols-2 sm:gap-3 sm:items-center lg:grid-cols-3 mt-3"
+  >
+    {
+      groupedServicesByFive(services).map((group) => (
+        <ul class="services-group text-center">
+          {group.map((service) => (
+            <li class="text-azul text-sm md:text-md font-bold font-Roboto md:hover:text-[15px] transition-all ease duration-300 mb-1 last-of-type:mb-0">
+              {service}
+            </li>
+          ))}
+        </ul>
+      ))
+    }
+  </div>
 </div>
+
+<style>
+  .services-group {
+    & li {
+      &::before {
+        content: "✔";
+        margin-right: 0.5rem;
+        color: rgb(171 29 108);
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 1024px) {
+      &:last-of-type {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+</style>
