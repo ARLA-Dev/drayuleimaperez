@@ -1,20 +1,8 @@
-# drayuleimaperez
-Nuevo Sitio Web para la Doctora Yuleima Pérez. Creado con:
+# React + Vite
 
-- Relume
-- React
-- Node v22.13.0
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-# Pasos de Utilizacion
+Currently, two official plugins are available:
 
-``npm i @relume_io/relume-ui @relume_io/relume-tailwind``
-
-Update Tailwind Config:
-
-```
-// Tailwind.config.js
-module.exports = {
-  content: ["./node_modules/@relume_io/relume-ui/dist/**/*.{js,ts,jsx,tsx}"],
-  presets: [require("@relume_io/relume-tailwind")],
-};
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
