@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar1 } from "./components/Navbar1";
 import { Header15 } from "./components/Header15";
 import { Header46 } from "./components/Header46";

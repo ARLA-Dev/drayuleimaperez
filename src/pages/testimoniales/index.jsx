@@ -4,7 +4,7 @@ import { Header47 } from "./components/Header47";
 import { Cta3 } from "./components/Cta3";
 import { Footer3 } from "./components/Footer3";
 
-export default function Page() {
+export default function Testimonios() {
   return (
     <div>
       <Navbar1 />

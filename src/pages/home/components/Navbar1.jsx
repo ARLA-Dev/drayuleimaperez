@@ -2,8 +2,9 @@
 
 import { Button, useMediaQuery } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import { useState } from "react";
 import { RxChevronDown } from "react-icons/rx";
+import { Link } from "react-router";
 
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -106,24 +107,24 @@ export function Navbar1() {
           transition={{ duration: 0.4 }}
           className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
-          <a
-            href="#"
+          <Link
+            to="/"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
             Inicio
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/servicios"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
             Servicios
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/sobre-mi"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
             Sobre Mí
-          </a>
+          </Link>
           <div
             onMouseEnter={useActive.openOnDesktopDropdownMenu}
             onMouseLeave={useActive.closeOnDesktopDropdownMenu}
@@ -163,24 +164,24 @@ export function Navbar1() {
                 transition={{ duration: 0.2 }}
                 className="bg-background-primary lg:absolute lg:z-50 lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
               >
-                <a
-                  href="#"
+                <Link
+                  to="/preguntas-frecuentes"
                   className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
                 >
                   Preguntas Frecuentes
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
                 >
                   Galería
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
                 >
                   Agendar Cita
-                </a>
+                </Link>
               </motion.nav>
             </AnimatePresence>
           </div>
