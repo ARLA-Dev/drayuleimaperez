@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
+:root{
+    --dark: #344551;
+    --pink: #d38cb1;
+    --grey: #82818b;
+    --white: #fffffc;
+}
 
 body{
-    color: #344551;
+    color: var(--dark);
 }

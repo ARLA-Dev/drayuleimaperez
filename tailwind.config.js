@@ -8,7 +8,7 @@ export default {
   theme: {
 
     colors: {
-      body: "#ffffff",
+      body: "#fae6e7",
     },
 
     fontFamily: {
@@ -114,12 +114,12 @@ export default {
       colors: {
         brand: {
           black: "#344551",
-          white: "#ffffff",
+          white: "#fae6e7",
         },
         neutral: {
           DEFAULT: "#666666",
           black: "#344551",
-          white: "#ffffff",
+          white: "#fae6e7",
           lightest: "#eeeeee",
           lighter: "#cccccc",
           light: "#aaaaaa",
@@ -134,8 +134,8 @@ export default {
           "error-red-light": "#fef3f2",
         },
         background: {
-          DEFAULT: "#ffffff", // bg-background, text-background, border-background,
-          primary: "#ffffff", // bg-background-primary, text-background-primary, border-background-primary,
+          DEFAULT: "#fae6e7", // bg-background, text-background, border-background,
+          primary: "#fae6e7", // bg-background-primary, text-background-primary, border-background-primary,
           secondary: "#eeeeee",
           tertiary: "#666666",
           alternative: "#344551",
@@ -147,7 +147,7 @@ export default {
           primary: "#344551",
           secondary: "#aaaaaa",
           tertiary: "#444444",
-          alternative: "#ffffff",
+          alternative: "#fae6e7",
           success: "#027a48",
           error: "#b42318",
         },
@@ -155,7 +155,7 @@ export default {
           DEFAULT: "#344551",
           primary: "#344551",
           secondary: "#aaaaaa",
-          alternative: "#ffffff",
+          alternative: "#fae6e7",
           success: "#027a48",
           error: "#b42318",
         },
@@ -163,7 +163,7 @@ export default {
           DEFAULT: "#344551",
           primary: "#344551",
           secondary: "#666666",
-          alternative: "#ffffff",
+          alternative: "#fae6e7",
         },
       },
 
