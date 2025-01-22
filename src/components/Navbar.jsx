@@ -38,7 +38,7 @@ const useRelume = () => {
   };
 };
 
-export function Navbar1() {
+export function Navbar() {
   const useActive = useRelume();
   return (
     <section

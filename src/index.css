@@ -6,9 +6,14 @@
     --dark: #344551;
     --pink: #d38cb1;
     --grey: #82818b;
-    --white: #fffffc;
+    --white: #fae6e7;
 }
 
 body{
     color: var(--dark);
+}
+
+.hamburger{
+    background-color: var(--dark);
+    height: 3px;
 }
