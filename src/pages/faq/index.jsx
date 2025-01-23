@@ -1,19 +1,15 @@
-import { Navbar1 } from "./components/Navbar1";
+import MetaTags from "../../components/MetaTags";
 import { Header49 } from "./components/Header49";
 import { Faq1 } from "./components/Faq1";
 import { Faq1_1 } from "./components/Faq1_1";
-import { Cta3 } from "./components/Cta3";
-import { Footer3 } from "./components/Footer3";
 
 export default function FAQ() {
   return (
     <div>
-      <Navbar1 />
+      <MetaTags title="About Me" description="" image="" name="ArLa" />
       <Header49 />
       <Faq1 />
       <Faq1_1 />
-      <Cta3 />
-      <Footer3 />
     </div>
   );
 }

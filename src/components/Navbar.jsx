@@ -108,18 +108,21 @@ export function Navbar() {
           className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
           <Link
+          reloadDocument
             to="/"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
             Inicio
           </Link>
           <Link
+            reloadDocument
             to="/servicios"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
             Servicios
           </Link>
           <Link
+            reloadDocument
             to="/sobre-mi"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
@@ -165,18 +168,21 @@ export function Navbar() {
                 className="bg-background-primary lg:absolute lg:z-50 lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
               >
                 <Link
+                  reloadDocument
                   to="/preguntas-frecuentes"
                   className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
                 >
                   Preguntas Frecuentes
                 </Link>
                 <Link
+                  reloadDocument
                   to="#"
                   className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
                 >
                   Galería
                 </Link>
                 <Link
+                  reloadDocument
                   to="#"
                   className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
                 >

@@ -1,15 +1,11 @@
-import { Navbar1 } from "./components/Navbar1";
+import MetaTags from "../../components/MetaTags";
 import { Blog4 } from "./components/Blog4";
-import { Cta3 } from "./components/Cta3";
-import { Footer3 } from "./components/Footer3";
 
 export default function Blog() {
   return (
     <div>
-      <Navbar1 />
+      <MetaTags title="Blog" description="" image="" name="ArLa" />
       <Blog4 />
-      <Cta3 />
-      <Footer3 />
     </div>
   );
 }

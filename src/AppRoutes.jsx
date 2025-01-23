@@ -8,12 +8,14 @@ import Blog from "./pages/blog";
 import Post from "./pages/blog-post";
 import Contact from "./pages/contact-and-location";
 import Testimonios from "./pages/testimoniales";
+import Servicio from "./pages/servicio";
 
 function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/servicios" element={<Services />} />
+      <Route path="/servicios/:id" element={<Servicio />} />
       <Route path="/sobre-mi" element={<AboutMe />} />
       <Route path="/preguntas-frecuentes" element={<FAQ />} />
       <Route path="/blog" element={<Blog />} />

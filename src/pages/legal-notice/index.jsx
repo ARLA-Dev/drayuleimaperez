@@ -1,14 +1,12 @@
-import React from "react";
-import { Navbar1 } from "./components/Navbar1";
+import MetaTags from "../../components/MetaTags";
 import { Content7 } from "./components/Content7";
-import { Footer3 } from "./components/Footer3";
 
 export default function Page() {
   return (
     <div>
-      <Navbar1 />
+      <MetaTags title="About Me" description="" image="" name="ArLa" />
+
       <Content7 />
-      <Footer3 />
     </div>
   );
 }
