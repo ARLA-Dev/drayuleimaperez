@@ -7,7 +7,12 @@ import MetaTags from "../../components/MetaTags";
 export default function AboutMe() {
   return (
     <div>
-      <MetaTags title="About Me" description="" image="" name="ArLa" />
+      <MetaTags
+        title="Conoce a la Dra. Yuleima Pérez | Ginecóloga y Obstetra en Barquisimeto"
+        description="Aprende más sobre la Dra. Yuleima Pérez, especialista en ginecología y obstetricia, con amplia experiencia y un enfoque cálido y personalizado en el cuidado de la salud femenina."
+        image=""
+        name="ArLa"
+      />
       <Header50 />
       <Layout241 />
       <Layout4 />
