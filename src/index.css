@@ -1,19 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root{
     --dark: #344551;
     --pink: #d38cb1;
     --grey: #82818b;
     --white: #fae6e7;
+
+    --playfair: 'Playfair Display', serif;
+    --lato: 'Lato', sans-serif;
 }
 
 body{
     color: var(--dark);
+    font-family: var(--lato);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--playfair);
+    word-spacing: 3px;
 }
 
 .hamburger{
     background-color: var(--dark);
     height: 3px;
+}
+
+button{
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        opacity: .95;
+    }
+}
+
+.span-primary{
+    color: var(--pink);
+}
+
+.span-secondary{
+    color: var(--dark);
 }

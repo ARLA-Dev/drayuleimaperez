@@ -43,16 +43,20 @@ export function Navbar() {
   return (
     <section
       id="relume"
-      className="flex w-full items-center border-b border-border-primary bg-background-primary lg:min-h-18 lg:px-[5%]"
+      className="flex w-full items-center bg-background-primary lg:min-h-18 lg:px-[5%] shadow-medium sticky top-0 z-50"
     >
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
-          <a href="#">
+          <Link to="/" reloadDocument className="flex items-center gap-2">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+              className="size-12 bg-background-secondary rounded-full"
+              src="/img/logo.png"
               alt="Logo image"
             />
-          </a>
+            <h1 className="text-lg font-bold text-text-secondary text-shadow">
+              Dra. Yuleima Pérez
+            </h1>
+          </Link>
           <button
             className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
             onClick={useActive.toggleMobileMenu}
@@ -61,7 +65,7 @@ export function Navbar() {
               className="my-[3px] h-0.5 w-6 hamburger"
               animate={useActive.animateMobileMenuButtonSpan}
               variants={{
-                open: { translateY: 8, transition: { delay: 0.1 } },
+                open: { translateY: 9, transition: { delay: 0.1 } },
                 rotatePhase: { rotate: -45, transition: { delay: 0.2 } },
                 closed: {
                   translateY: 0,
@@ -108,7 +112,7 @@ export function Navbar() {
           className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
           <Link
-          reloadDocument
+            reloadDocument
             to="/"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
@@ -169,24 +173,26 @@ export function Navbar() {
               >
                 <Link
                   reloadDocument
+                  to="/blog"
+                  className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
+                >
+                  Blog
+                </Link>
+
+                <Link
+                  reloadDocument
                   to="/preguntas-frecuentes"
                   className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
                 >
                   Preguntas Frecuentes
                 </Link>
+
                 <Link
                   reloadDocument
-                  to="#"
+                  to="/testimoniales"
                   className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
                 >
-                  Galería
-                </Link>
-                <Link
-                  reloadDocument
-                  to="#"
-                  className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
-                >
-                  Agendar Cita
+                  Testimoniales
                 </Link>
               </motion.nav>
             </AnimatePresence>
@@ -196,11 +202,15 @@ export function Navbar() {
               title="Agendar Cita"
               variant="secondary"
               size="sm"
-              className="w-full"
+              className="w-full bg-background-secondary border-0"
             >
               Agendar Cita
             </Button>
-            <Button title="Contacto" size="sm" className="w-full">
+            <Button
+              title="Contacto"
+              size="sm"
+              className="w-full text-text-secondary"
+            >
               Contacto
             </Button>
           </div>
